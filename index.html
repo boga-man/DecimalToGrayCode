@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Decimal To GrayCode Converter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+
+    <div id="canvas">
+        <div id="title" class="heading">Decimal To GrayCode Converter</div>
+        <div id="prompt" class="content">Enter a number to get it's equivalent <a href="https://www.tutorialspoint.com/what-is-gray-code" target="_blank">GRAY</a> code</div>
+
+        <div id="range" class="content">
+          Range is 0 to +9,223,372,036,854,775,807
+        </div>
+
+        <input type="text" id="input" name="input" placeholder="Enter your number here">
+        <button id="cnvt" class="content">CONVERT</button>
+
+        <div id="output" class="content" visibility="hidden">vidnjkjdsnknkx km </div>
+    </div>
+    
+    
+    
+    <footer class="content">
+        <span id="author">Made by <a href="https://github.com/ManojBoganadham">Manoj Boganadham</a></span>
+        <span id="source">Source <a href="#">Code</a></span>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<!-- <div class="designBack">
+    <div id="des1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="351" height="251" viewBox="0 0 351 251">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+            }
+      
+            .cls-2 {
+              clip-path: url(#clip-path);
+            }
+      
+            .cls-3 {
+              fill: #ba6c65;
+            }
+          </style>
+          <clipPath id="clip-path">
+            <rect class="cls-1" width="251" height="351"/>
+          </clipPath>
+        </defs>
+        <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2" transform="translate(351) rotate(90)">
+          <g transform="translate(-624 -447)">
+            <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -447)">
+            <circle id="Ellipse_1-2" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -447)">
+            <circle id="Ellipse_1-3" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -447)">
+            <circle id="Ellipse_1-4" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -447)">
+            <circle id="Ellipse_1-5" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -447)">
+            <circle id="Ellipse_1-6" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -447)">
+            <circle id="Ellipse_1-7" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -447)">
+            <circle id="Ellipse_1-8" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -447)">
+            <circle id="Ellipse_1-9" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -417)">
+            <circle id="Ellipse_1-10" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -417)">
+            <circle id="Ellipse_1-11" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -417)">
+            <circle id="Ellipse_1-12" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -417)">
+            <circle id="Ellipse_1-13" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -417)">
+            <circle id="Ellipse_1-14" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -417)">
+            <circle id="Ellipse_1-15" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -417)">
+            <circle id="Ellipse_1-16" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -417)">
+            <circle id="Ellipse_1-17" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -417)">
+            <circle id="Ellipse_1-18" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -387)">
+            <circle id="Ellipse_1-19" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -387)">
+            <circle id="Ellipse_1-20" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -387)">
+            <circle id="Ellipse_1-21" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -387)">
+            <circle id="Ellipse_1-22" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -387)">
+            <circle id="Ellipse_1-23" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -387)">
+            <circle id="Ellipse_1-24" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -387)">
+            <circle id="Ellipse_1-25" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -387)">
+            <circle id="Ellipse_1-26" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -387)">
+            <circle id="Ellipse_1-27" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -357)">
+            <circle id="Ellipse_1-28" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -357)">
+            <circle id="Ellipse_1-29" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -357)">
+            <circle id="Ellipse_1-30" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -357)">
+            <circle id="Ellipse_1-31" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -357)">
+            <circle id="Ellipse_1-32" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -357)">
+            <circle id="Ellipse_1-33" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -357)">
+            <circle id="Ellipse_1-34" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -357)">
+            <circle id="Ellipse_1-35" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -357)">
+            <circle id="Ellipse_1-36" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -327)">
+            <circle id="Ellipse_1-37" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -327)">
+            <circle id="Ellipse_1-38" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -327)">
+            <circle id="Ellipse_1-39" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -327)">
+            <circle id="Ellipse_1-40" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -327)">
+            <circle id="Ellipse_1-41" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -327)">
+            <circle id="Ellipse_1-42" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -327)">
+            <circle id="Ellipse_1-43" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -327)">
+            <circle id="Ellipse_1-44" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -327)">
+            <circle id="Ellipse_1-45" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -297)">
+            <circle id="Ellipse_1-46" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -297)">
+            <circle id="Ellipse_1-47" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -297)">
+            <circle id="Ellipse_1-48" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -297)">
+            <circle id="Ellipse_1-49" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -297)">
+            <circle id="Ellipse_1-50" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -297)">
+            <circle id="Ellipse_1-51" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -297)">
+            <circle id="Ellipse_1-52" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -297)">
+            <circle id="Ellipse_1-53" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -297)">
+            <circle id="Ellipse_1-54" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -267)">
+            <circle id="Ellipse_1-55" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -267)">
+            <circle id="Ellipse_1-56" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -267)">
+            <circle id="Ellipse_1-57" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -267)">
+            <circle id="Ellipse_1-58" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -267)">
+            <circle id="Ellipse_1-59" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -267)">
+            <circle id="Ellipse_1-60" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -267)">
+            <circle id="Ellipse_1-61" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -267)">
+            <circle id="Ellipse_1-62" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -267)">
+            <circle id="Ellipse_1-63" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -237)">
+            <circle id="Ellipse_1-64" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -237)">
+            <circle id="Ellipse_1-65" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -237)">
+            <circle id="Ellipse_1-66" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -237)">
+            <circle id="Ellipse_1-67" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -237)">
+            <circle id="Ellipse_1-68" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -237)">
+            <circle id="Ellipse_1-69" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -237)">
+            <circle id="Ellipse_1-70" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -237)">
+            <circle id="Ellipse_1-71" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -237)">
+            <circle id="Ellipse_1-72" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -207)">
+            <circle id="Ellipse_1-73" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -207)">
+            <circle id="Ellipse_1-74" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -207)">
+            <circle id="Ellipse_1-75" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -207)">
+            <circle id="Ellipse_1-76" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -207)">
+            <circle id="Ellipse_1-77" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -207)">
+            <circle id="Ellipse_1-78" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -207)">
+            <circle id="Ellipse_1-79" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -207)">
+            <circle id="Ellipse_1-80" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -207)">
+            <circle id="Ellipse_1-81" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -177)">
+            <circle id="Ellipse_1-82" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -177)">
+            <circle id="Ellipse_1-83" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -177)">
+            <circle id="Ellipse_1-84" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -177)">
+            <circle id="Ellipse_1-85" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -177)">
+            <circle id="Ellipse_1-86" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -177)">
+            <circle id="Ellipse_1-87" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -177)">
+            <circle id="Ellipse_1-88" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -177)">
+            <circle id="Ellipse_1-89" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -177)">
+            <circle id="Ellipse_1-90" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -147)">
+            <circle id="Ellipse_1-91" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -147)">
+            <circle id="Ellipse_1-92" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -147)">
+            <circle id="Ellipse_1-93" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -147)">
+            <circle id="Ellipse_1-94" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -147)">
+            <circle id="Ellipse_1-95" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -147)">
+            <circle id="Ellipse_1-96" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -147)">
+            <circle id="Ellipse_1-97" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -147)">
+            <circle id="Ellipse_1-98" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -147)">
+            <circle id="Ellipse_1-99" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-624 -117)">
+            <circle id="Ellipse_1-100" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-594 -117)">
+            <circle id="Ellipse_1-101" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-564 -117)">
+            <circle id="Ellipse_1-102" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-534 -117)">
+            <circle id="Ellipse_1-103" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-504 -117)">
+            <circle id="Ellipse_1-104" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-474 -117)">
+            <circle id="Ellipse_1-105" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-444 -117)">
+            <circle id="Ellipse_1-106" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-414 -117)">
+            <circle id="Ellipse_1-107" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+          <g transform="translate(-384 -117)">
+            <circle id="Ellipse_1-108" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+          </g>
+        </g>
+      </svg>
+      </div>
+    <div id="des2">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="251" height="169" viewBox="0 0 251 169">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                }
+          
+                .cls-2 {
+                  clip-path: url(#clip-path);
+                }
+          
+                .cls-3 {
+                  fill: #f2be8d;
+                }
+              </style>
+              <clipPath id="clip-path">
+                <rect class="cls-1" width="100" height="50"/>
+              </clipPath>
+            </defs>
+            <g id="Repeat_Grid_2" data-name="Repeat Grid 2" class="cls-2">
+              <g transform="translate(-624 -447)">
+                <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -447)">
+                <circle id="Ellipse_1-2" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -447)">
+                <circle id="Ellipse_1-3" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -447)">
+                <circle id="Ellipse_1-4" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -447)">
+                <circle id="Ellipse_1-5" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -447)">
+                <circle id="Ellipse_1-6" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -447)">
+                <circle id="Ellipse_1-7" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -447)">
+                <circle id="Ellipse_1-8" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -447)">
+                <circle id="Ellipse_1-9" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-624 -417)">
+                <circle id="Ellipse_1-10" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -417)">
+                <circle id="Ellipse_1-11" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -417)">
+                <circle id="Ellipse_1-12" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -417)">
+                <circle id="Ellipse_1-13" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -417)">
+                <circle id="Ellipse_1-14" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -417)">
+                <circle id="Ellipse_1-15" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -417)">
+                <circle id="Ellipse_1-16" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -417)">
+                <circle id="Ellipse_1-17" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -417)">
+                <circle id="Ellipse_1-18" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-624 -387)">
+                <circle id="Ellipse_1-19" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -387)">
+                <circle id="Ellipse_1-20" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -387)">
+                <circle id="Ellipse_1-21" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -387)">
+                <circle id="Ellipse_1-22" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -387)">
+                <circle id="Ellipse_1-23" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -387)">
+                <circle id="Ellipse_1-24" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -387)">
+                <circle id="Ellipse_1-25" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -387)">
+                <circle id="Ellipse_1-26" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -387)">
+                <circle id="Ellipse_1-27" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-624 -357)">
+                <circle id="Ellipse_1-28" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -357)">
+                <circle id="Ellipse_1-29" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -357)">
+                <circle id="Ellipse_1-30" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -357)">
+                <circle id="Ellipse_1-31" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -357)">
+                <circle id="Ellipse_1-32" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -357)">
+                <circle id="Ellipse_1-33" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -357)">
+                <circle id="Ellipse_1-34" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -357)">
+                <circle id="Ellipse_1-35" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -357)">
+                <circle id="Ellipse_1-36" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-624 -327)">
+                <circle id="Ellipse_1-37" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -327)">
+                <circle id="Ellipse_1-38" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -327)">
+                <circle id="Ellipse_1-39" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -327)">
+                <circle id="Ellipse_1-40" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -327)">
+                <circle id="Ellipse_1-41" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -327)">
+                <circle id="Ellipse_1-42" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -327)">
+                <circle id="Ellipse_1-43" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -327)">
+                <circle id="Ellipse_1-44" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -327)">
+                <circle id="Ellipse_1-45" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-624 -297)">
+                <circle id="Ellipse_1-46" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-594 -297)">
+                <circle id="Ellipse_1-47" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-564 -297)">
+                <circle id="Ellipse_1-48" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-534 -297)">
+                <circle id="Ellipse_1-49" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-504 -297)">
+                <circle id="Ellipse_1-50" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-474 -297)">
+                <circle id="Ellipse_1-51" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-444 -297)">
+                <circle id="Ellipse_1-52" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-414 -297)">
+                <circle id="Ellipse_1-53" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+              <g transform="translate(-384 -297)">
+                <circle id="Ellipse_1-54" data-name="Ellipse 1" class="cls-3" cx="5" cy="5" r="5" transform="translate(624 447)"/>
+              </g>
+            </g>
+          </svg>              
+    </div>
+</div> -->
