@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link href="styles.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
@@ -34,6 +35,58 @@
         name="input"
         placeholder="Enter your number here"
       />
+      <div class="content">
+        <label for="base">Base</label>
+        <div id="input-type" class="row">
+          <label class="radio-inline"
+            ><input
+              name="base"
+              id="decimal"
+              value="decimal"
+              type="radio"
+            />decimal</label
+          >
+          <label class="radio-inline"
+            ><input
+              name="base"
+              id="binary"
+              value="binary"
+              type="radio"
+            />binary</label
+          >
+          <label class="radio-inline"
+            ><input
+              name="base"
+              id="octal"
+              value="octal"
+              type="radio"
+            />octal</label
+          >
+          <label class="radio-inline"
+            ><input
+              name="base"
+              id="hexa"
+              value="hexadecimal"
+              type="radio"
+            />hexadecimal</label
+          >
+          <label class="radio-inline"
+            ><input
+              name="base"
+              id="grey"
+              value="grey"
+              type="radio"
+            />grey</label
+          >
+          <label class="radio-inline"
+            ><input name="base" id="xs3" value="xs3" type="radio" />excess
+            3</label
+          >
+          <label class="radio-inline"
+            ><input name="base" id="bcd" value="bcd" type="radio" />BCD</label
+          >
+        </div>
+      </div>
       <button id="cnvt" class="content">CONVERT</button>
 
       <div id="grey" class="content"></div>
