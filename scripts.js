@@ -49,6 +49,7 @@ function DecToXS3(num, excess) {
     if (temp < 4) {
         for (let i = 0; i < 4 - temp; i++) str = "0" + str;
     }
+    console.log(str + "help");
     return str;
 }
 
@@ -61,7 +62,6 @@ function convt() {
     // x += ", binary : " + decToBin(num, 2).toString();
     // x += ", octal : " + decToBin(num, 8).toString();
     // x += ", XS-3 : " + DecToXS3(num);
-
     document.getElementById("grey").innerHTML = x;
     document.getElementById("grey").style.visibility = "visible";
     x =
