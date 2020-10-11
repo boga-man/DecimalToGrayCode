@@ -49,13 +49,87 @@ function DecToXS3(num, excess) {
     if (temp < 4) {
         for (let i = 0; i < 4 - temp; i++) str = "0" + str;
     }
-    console.log(str + "help");
     return str;
 }
 
+function bcdToDecimal(s) {
+    var len = s.length,
+        check = 0,
+        check0 = 0;
+    var num = 0,
+        sum = 0,
+        mul = 1,
+        rev = 0;
+
+    for (let i = len - 1; i >= 0; i--) {
+
+        sum += (s[i] - '0') * mul;
+        mul *= 2;
+        check++;
+
+
+        if (check == 4 || i == 0) {
+            if (sum == 0 && check0 == 0) {
+                num = 1;
+                check0 = 1;
+            } else {
+                num = num * 10 + sum;
+            }
+
+            check = 0;
+            sum = 0;
+            mul = 1;
+        }
+    }
+
+    while (num > 0) {
+        rev = rev * 10 + (num % 10);
+        num /= 10;
+    }
+
+    if (check0 == 1)
+        return rev - 1;
+
+    return rev;
+}
+
+function flip(c) { return (c == '0') ? '1' : '0'; }
+
+function graytoBinary(gray) {
+    var binary = "";
+
+
+    binary += gray[0];
+
+
+    for (let i = 1; i < gray.length; i++) {
+
+        if (gray[i] == '0')
+            binary += binary[i - 1];
+
+
+        else
+            binary += flip(binary[i - 1]);
+    }
+
+    return binary;
+}
+
 function convt() {
+    var base = document.getElementById("inputbase").value;
+    base = parseInt(base);
+    var num;
     var x = document.getElementById("input").value;
-    var num = parseInt(x);
+    if (base == 10 || base == 2 || base == 8 || base == 16) {
+        num = parseInt(x, base);
+    }
+    if (base == 1) {
+        num = bcdToDecimal(x);
+    }
+    if (base == 0) {
+        num = parseInt(graytoBinary(x), 2);
+    }
+
     x = decToBin(num, 2);
     x = binToGray(x);
     x = "Gray code of " + num.toString() + " is : " + x;
@@ -89,3 +163,26 @@ function convt() {
 
 var btn = document.getElementById("cnvt");
 btn.addEventListener("click", convt);
+var input = document.getElementById("input");
+
+
+input.addEventListener("keyup", function(event) {
+
+    if (event.keyCode === 13) {
+
+        event.preventDefault();
+
+        document.getElementById("cnvt").click();
+    }
+});
+
+var dummy = document.getElementById("inputbase");
+dummy.addEventListener("keyup", function(event) {
+
+    if (event.keyCode === 13) {
+
+        event.preventDefault();
+
+        document.getElementById("cnvt").click();
+    }
+});

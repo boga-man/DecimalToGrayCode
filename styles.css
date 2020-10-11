@@ -10,6 +10,7 @@ body {
     font-family: "sans-serif";
     background-color: #20212c;
     color: #f2be8d;
+    scroll-behavior: smooth;
 }
 
 #canvas {
@@ -33,6 +34,7 @@ body {
     text-align: center;
     font-size: 1em;
     font-weight: 400;
+    visibility: hidden;
 }
 
 #title {
@@ -68,7 +70,8 @@ a:hover {
     letter-spacing: 2px;
 }
 
-#input {
+#input,
+#inputbase {
     background-color: floralwhite;
     padding: 0px 10px;
     box-shadow: 0px 0px 7px #f2be8d;
@@ -85,7 +88,9 @@ a:hover {
 }
 
 #input:hover,
-#input:focus {
+#input:focus,
+#inputbase:hover,
+#inputbase:focus {
     box-shadow: 0px 0px 15px #ba6c65;
 }
 
