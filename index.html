@@ -27,14 +27,22 @@
             is 0 to +9,223,372,036,854,775,807 enter 0 for grey, 1 for BCD
         </div>
         <input type="text" id="input" name="input" placeholder="Enter your number here" />
+        <span>
+        <form class="form-inline" id="prompt" style="align-self: center;">
+            <input type="radio" id="grey" name="base" value="grey">
+            <label for="male">grey</label><br>
+            <input type="radio" id="bcd" name="base" value="bcd">
+            <label for="female">BCD</label><br>
+            <input type="radio" id="other" name="base" value="other" checked="checked">
+            <label for="other">Other</label>
+        <br>
+      
+        </form></span>
         <input type="text" id="inputbase" name="inputbase" placeholder="Enter your base here" />
         <button id="cnvt" class="content">CONVERT</button>
-
-        <div id="grey" class="content"></div>
-        <br />
         <div id="xs3" class="content"></div>
         <br />
-        <div id="bcd" class="content"></div>
+        <div id="sev" class="content" style="visibility: visible;"></div>
         <br />
         <div id="binary" class="content"></div>
         <br />
@@ -50,10 +58,8 @@
         <span id="author">Made by
         <a href="https://github.com/ManojBoganadham" target="_blank"
           >Manoj Boganadham</a
-        ></span
-      >
-      <span id="source"
-        >Source
+        ><br><br><a href="https://github.com/lokeshtejavath" target="_blank">Lokesh Tejavath</a></span>
+        <span id="source">Source
         <a
           href="https://github.com/ManojBoganadham/DecimalToGrayCode"
           target="_blank"

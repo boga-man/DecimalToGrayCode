@@ -60,7 +60,6 @@ function bcdToDecimal(s) {
         var current = parseInt(s.substring((4 * i), (4 * (i + 1))), 2);
         total *= 10;
         total += current;
-        console.log(total, ' ', base);
         base += 1;
     }
 
@@ -90,18 +89,18 @@ function graytoBinary(gray) {
 }
 
 function convt() {
+    var b = document.getElementsByName("base");
     var base = document.getElementById("inputbase").value;
     base = parseInt(base);
     var num;
     var x = document.getElementById("input").value;
-    if (base == 10 || base == 2 || base == 8 || base == 16) {
+    if (b[2].checked) {
         num = parseInt(x, base);
     }
-    if (base == 1) {
-        console.log(x);
+    if (b[1].checked) {
         num = bcdToDecimal(x);
     }
-    if (base == 0) {
+    if (b[0].checked) {
         num = parseInt(graytoBinary(x), 2);
     }
 
@@ -125,8 +124,7 @@ function convt() {
     document.getElementById("xs3").innerHTML = x;
     document.getElementById("xs3").style.visibility = "visible";
     x = "BCD code of " + num.toString() + " is : " + DecToXS3(num, 0);
-    document.getElementById("bcd").innerHTML = x;
-    document.getElementById("bcd").style.visibility = "visible";
+    document.getElementById("sev").innerHTML = x;
     x =
         " hexadecimal code of " +
         num.toString() +
