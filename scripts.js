@@ -53,44 +53,18 @@ function DecToXS3(num, excess) {
 }
 
 function bcdToDecimal(s) {
-    var len = s.length,
-        check = 0,
-        check0 = 0;
-    var num = 0,
-        sum = 0,
-        mul = 1,
-        rev = 0;
-
-    for (let i = len - 1; i >= 0; i--) {
-
-        sum += (s[i] - '0') * mul;
-        mul *= 2;
-        check++;
-
-
-        if (check == 4 || i == 0) {
-            if (sum == 0 && check0 == 0) {
-                num = 1;
-                check0 = 1;
-            } else {
-                num = num * 10 + sum;
-            }
-
-            check = 0;
-            sum = 0;
-            mul = 1;
-        }
+    var len = s.length;
+    var total = 0;
+    var base = 0;
+    for (var i = 0; i < len / 4; i++) {
+        var current = parseInt(s.substring((4 * i), (4 * (i + 1))), 2);
+        total *= 10;
+        total += current;
+        console.log(total, ' ', base);
+        base += 1;
     }
 
-    while (num > 0) {
-        rev = rev * 10 + (num % 10);
-        num /= 10;
-    }
-
-    if (check0 == 1)
-        return rev - 1;
-
-    return rev;
+    return total;
 }
 
 function flip(c) { return (c == '0') ? '1' : '0'; }
@@ -124,6 +98,7 @@ function convt() {
         num = parseInt(x, base);
     }
     if (base == 1) {
+        console.log(x);
         num = bcdToDecimal(x);
     }
     if (base == 0) {

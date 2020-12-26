@@ -28,15 +28,6 @@ body {
     font-size: 2em;
 }
 
-.content,
-#base {
-    font-family: "Open Sans", serif;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 400;
-    visibility: hidden;
-}
-
 #title {
     margin: 20px;
 }
@@ -50,7 +41,7 @@ body {
 
 #range {
     margin: 5px;
-    font-size: 0.7em;
+    font-size: 1em;
     color: #ba6c65;
 }
 
@@ -94,7 +85,8 @@ a:hover {
     box-shadow: 0px 0px 15px #ba6c65;
 }
 
-#cnvt {
+#cnvt,
+#refresh {
     border: none;
     background-color: #d88a83;
     padding: 5px 20px;
@@ -102,10 +94,10 @@ a:hover {
     font-size: 0.8em;
     letter-spacing: 1px;
     margin: 0px auto 10px;
-    display: block;
     color: #303242;
     font-weight: 800;
     transition: background-color 0.5s;
+    display: inline;
 }
 
 #cnvt:hover {
@@ -138,4 +130,12 @@ footer a {
 
 footer span {
     width: 40%;
+}
+
+.content,
+#base {
+    font-family: "Open Sans", serif;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
 }
