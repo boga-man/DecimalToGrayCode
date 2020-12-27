@@ -91,7 +91,12 @@ function graytoBinary(gray) {
 function convt() {
     var b = document.getElementsByName("base");
     var base = document.getElementById("inputbase").value;
-    base = parseInt(base);
+    console.log(true || true === true);
+    if (base !== "")
+        base = parseInt(base);
+    else
+        base = 10;
+
     var num;
     var x = document.getElementById("input").value;
     if (b[2].checked) {
