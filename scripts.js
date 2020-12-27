@@ -159,3 +159,17 @@ dummy.addEventListener("keyup", function(event) {
         document.getElementById("cnvt").click();
     }
 });
+
+function vanish() {
+    if (!document.getElementsByName("base")[2].checked) {
+        var inp = document.getElementById("inputbase");
+        inp.style.display = "none";
+    }
+}
+
+function visib() {
+    if (document.getElementsByName("base")[2].checked) {
+        var inp = document.getElementById("inputbase");
+        inp.style.display = "block";
+    }
+}
